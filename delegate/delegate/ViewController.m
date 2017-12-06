@@ -10,6 +10,7 @@
 #import "DeteViewController.h"
 #import "BlockViewController.h"
 #import "NotViewController.h"
+#import "EnumViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * _tab ;
@@ -69,6 +70,11 @@ static NSString * str = @"index" ;
             break ;
         case 2:{
             BlockViewController * vi = [[BlockViewController alloc] init] ;
+            [self.navigationController pushViewController:vi animated:YES] ;
+        }
+            break ;
+        case 3:{
+            EnumViewController * vi = [[EnumViewController alloc] init] ;
             [self.navigationController pushViewController:vi animated:YES] ;
         }
             
