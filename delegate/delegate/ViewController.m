@@ -11,6 +11,7 @@
 #import "BlockViewController.h"
 #import "NotViewController.h"
 #import "EnumViewController.h"
+#import "SingViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * _tab ;
@@ -30,9 +31,10 @@ static NSString * str = @"index" ;
     _tab.delegate = self ;
     _tab.dataSource = self ;
     _tab.tableFooterView = [[UIView alloc] init] ;
+    
     [self.view addSubview:_tab] ;
    
-    _ary = [NSArray arrayWithObjects:@"代理",@"通知",@"block",@"枚举", nil] ;
+    _ary = [NSArray arrayWithObjects:@"代理",@"通知",@"block",@"枚举",@"单例", nil] ;
     
 }
 
@@ -50,7 +52,21 @@ static NSString * str = @"index" ;
 {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:str] ;
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str] ;
-    cell.textLabel.text = _ary[indexPath.row] ;//取消点击cell留下的灰条
+    /*
+     **刷新局部cell 自带动画
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil]withRowAnimation:UITableViewRowAnimationFade];
+    
+    */
+    
+    
+    //刷新局部section自带动画
+    NSIndexSet *indexSet = [[NSIndexSet alloc] initWithIndex:0];
+    [tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationLeft] ;
+    
+    
+    cell.textLabel.text = _ary[indexPath.row] ;
+    //取消点击cell留下的灰条
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone] ;
     return cell ;
 }
@@ -75,6 +91,11 @@ static NSString * str = @"index" ;
             break ;
         case 3:{
             EnumViewController * vi = [[EnumViewController alloc] init] ;
+            [self.navigationController pushViewController:vi animated:YES] ;
+        }
+            break ;
+        case 4:{
+            SingViewController * vi = [[SingViewController alloc] init] ;
             [self.navigationController pushViewController:vi animated:YES] ;
         }
             

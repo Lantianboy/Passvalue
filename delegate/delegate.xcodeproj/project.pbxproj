@@ -21,6 +21,9 @@
 		0985EFB51FD523CD00B26B8A /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0985EFB41FD523CD00B26B8A /* BlockViewController.m */; };
 		0985EFB81FD523E800B26B8A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0985EFB71FD523E800B26B8A /* SecondViewController.m */; };
 		0985EFBC1FD52C2D00B26B8A /* NotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0985EFBB1FD52C2D00B26B8A /* NotViewController.m */; };
+		098A18A61FD7CED900AF8805 /* modell.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A18A51FD7CED900AF8805 /* modell.m */; };
+		098A18A91FD7CF0000AF8805 /* SingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A18A81FD7CF0000AF8805 /* SingViewController.m */; };
+		098A18AC1FD7DBFE00AF8805 /* SecSingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098A18AB1FD7DBFE00AF8805 /* SecSingViewController.m */; };
 		09A9C4941FD6364400C8DCC5 /* SecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A9C4931FD6364400C8DCC5 /* SecViewController.m */; };
 		09A9C4981FD6862200C8DCC5 /* EnumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A9C4971FD6862200C8DCC5 /* EnumViewController.m */; };
 		09A9C49B1FD6864200C8DCC5 /* EnumTowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A9C49A1FD6864200C8DCC5 /* EnumTowViewController.m */; };
@@ -72,6 +75,12 @@
 		0985EFB71FD523E800B26B8A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		0985EFBA1FD52C2D00B26B8A /* NotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotViewController.h; sourceTree = "<group>"; };
 		0985EFBB1FD52C2D00B26B8A /* NotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotViewController.m; sourceTree = "<group>"; };
+		098A18A41FD7CED900AF8805 /* modell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modell.h; sourceTree = "<group>"; };
+		098A18A51FD7CED900AF8805 /* modell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = modell.m; sourceTree = "<group>"; };
+		098A18A71FD7CF0000AF8805 /* SingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingViewController.h; sourceTree = "<group>"; };
+		098A18A81FD7CF0000AF8805 /* SingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingViewController.m; sourceTree = "<group>"; };
+		098A18AA1FD7DBFE00AF8805 /* SecSingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecSingViewController.h; sourceTree = "<group>"; };
+		098A18AB1FD7DBFE00AF8805 /* SecSingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecSingViewController.m; sourceTree = "<group>"; };
 		09A9C4921FD6364400C8DCC5 /* SecViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecViewController.h; sourceTree = "<group>"; };
 		09A9C4931FD6364400C8DCC5 /* SecViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecViewController.m; sourceTree = "<group>"; };
 		09A9C4961FD6862200C8DCC5 /* EnumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumViewController.h; sourceTree = "<group>"; };
@@ -136,6 +145,7 @@
 				0985EFB21FD523AA00B26B8A /* Block */,
 				0985EFB91FD52BAD00B26B8A /* Notification */,
 				09A9C4951FD67A9C00C8DCC5 /* Enumerate */,
+				098A18A31FD7CE7200AF8805 /* Singlecase */,
 				0985EF7C1FD4F93700B26B8A /* Main.storyboard */,
 				0985EF7F1FD4F93700B26B8A /* Assets.xcassets */,
 				0985EF811FD4F93700B26B8A /* LaunchScreen.storyboard */,
@@ -196,6 +206,19 @@
 				09A9C4931FD6364400C8DCC5 /* SecViewController.m */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		098A18A31FD7CE7200AF8805 /* Singlecase */ = {
+			isa = PBXGroup;
+			children = (
+				098A18A41FD7CED900AF8805 /* modell.h */,
+				098A18A51FD7CED900AF8805 /* modell.m */,
+				098A18A71FD7CF0000AF8805 /* SingViewController.h */,
+				098A18A81FD7CF0000AF8805 /* SingViewController.m */,
+				098A18AA1FD7DBFE00AF8805 /* SecSingViewController.h */,
+				098A18AB1FD7DBFE00AF8805 /* SecSingViewController.m */,
+			);
+			path = Singlecase;
 			sourceTree = "<group>";
 		};
 		09A9C4951FD67A9C00C8DCC5 /* Enumerate */ = {
@@ -344,8 +367,10 @@
 			files = (
 				0985EFAA1FD4F94B00B26B8A /* DateViewController.m in Sources */,
 				0985EFAD1FD5115400B26B8A /* DataView.m in Sources */,
+				098A18A61FD7CED900AF8805 /* modell.m in Sources */,
 				0985EFBC1FD52C2D00B26B8A /* NotViewController.m in Sources */,
 				0985EF7B1FD4F93700B26B8A /* ViewController.m in Sources */,
+				098A18A91FD7CF0000AF8805 /* SingViewController.m in Sources */,
 				0985EF861FD4F93800B26B8A /* main.m in Sources */,
 				09A9C4981FD6862200C8DCC5 /* EnumViewController.m in Sources */,
 				0985EFB81FD523E800B26B8A /* SecondViewController.m in Sources */,
@@ -354,6 +379,7 @@
 				0985EFB01FD51A0B00B26B8A /* DeteViewController.m in Sources */,
 				09A9C4941FD6364400C8DCC5 /* SecViewController.m in Sources */,
 				0985EF781FD4F93700B26B8A /* AppDelegate.m in Sources */,
+				098A18AC1FD7DBFE00AF8805 /* SecSingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
