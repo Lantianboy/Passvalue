@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0982F0ED1FFDC50200D85F52 /* ArchiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0982F0EC1FFDC50200D85F52 /* ArchiveViewController.m */; };
+		0982F0F01FFDC54C00D85F52 /* ArchiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0982F0EF1FFDC54C00D85F52 /* ArchiveModel.m */; };
+		0982F0F41FFDF9EA00D85F52 /* PlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0982F0F31FFDF9EA00D85F52 /* PlistViewController.m */; };
+		0982F0F81FFE08BD00D85F52 /* ShowdataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0982F0F71FFE08BD00D85F52 /* ShowdataViewController.m */; };
+		0982F0FB1FFE08F200D85F52 /* ShowdataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0982F0FA1FFE08F200D85F52 /* ShowdataTableViewCell.m */; };
+		0982F0FE1FFE1D7A00D85F52 /* AddataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0982F0FD1FFE1D7A00D85F52 /* AddataViewController.m */; };
+		0982F1011FFE256600D85F52 /* AddataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0982F1001FFE256600D85F52 /* AddataTableViewCell.m */; };
 		0985EF781FD4F93700B26B8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0985EF771FD4F93700B26B8A /* AppDelegate.m */; };
 		0985EF7B1FD4F93700B26B8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0985EF7A1FD4F93700B26B8A /* ViewController.m */; };
 		0985EF7E1FD4F93700B26B8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0985EF7C1FD4F93700B26B8A /* Main.storyboard */; };
@@ -47,6 +54,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0982F0EB1FFDC50200D85F52 /* ArchiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchiveViewController.h; sourceTree = "<group>"; };
+		0982F0EC1FFDC50200D85F52 /* ArchiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchiveViewController.m; sourceTree = "<group>"; };
+		0982F0EE1FFDC54C00D85F52 /* ArchiveModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchiveModel.h; sourceTree = "<group>"; };
+		0982F0EF1FFDC54C00D85F52 /* ArchiveModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchiveModel.m; sourceTree = "<group>"; };
+		0982F0F21FFDF9EA00D85F52 /* PlistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlistViewController.h; sourceTree = "<group>"; };
+		0982F0F31FFDF9EA00D85F52 /* PlistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlistViewController.m; sourceTree = "<group>"; };
+		0982F0F61FFE08BD00D85F52 /* ShowdataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowdataViewController.h; sourceTree = "<group>"; };
+		0982F0F71FFE08BD00D85F52 /* ShowdataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowdataViewController.m; sourceTree = "<group>"; };
+		0982F0F91FFE08F200D85F52 /* ShowdataTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowdataTableViewCell.h; sourceTree = "<group>"; };
+		0982F0FA1FFE08F200D85F52 /* ShowdataTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowdataTableViewCell.m; sourceTree = "<group>"; };
+		0982F0FC1FFE1D7A00D85F52 /* AddataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddataViewController.h; sourceTree = "<group>"; };
+		0982F0FD1FFE1D7A00D85F52 /* AddataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddataViewController.m; sourceTree = "<group>"; };
+		0982F0FF1FFE256600D85F52 /* AddataTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddataTableViewCell.h; sourceTree = "<group>"; };
+		0982F1001FFE256600D85F52 /* AddataTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddataTableViewCell.m; sourceTree = "<group>"; };
 		0985EF731FD4F93700B26B8A /* delegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0985EF761FD4F93700B26B8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0985EF771FD4F93700B26B8A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +135,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0982F0E51FFDC3B800D85F52 /* 数据传值 */ = {
+			isa = PBXGroup;
+			children = (
+				098A18A31FD7CE7200AF8805 /* Singlecase */,
+				09A9C4951FD67A9C00C8DCC5 /* Enumerate */,
+				0985EFB91FD52BAD00B26B8A /* Notification */,
+				0985EFB21FD523AA00B26B8A /* Block */,
+				0985EFB11FD5228700B26B8A /* Delegate */,
+			);
+			path = "数据传值";
+			sourceTree = "<group>";
+		};
+		0982F0E61FFDC41300D85F52 /* 数据持久化 */ = {
+			isa = PBXGroup;
+			children = (
+				0982F0EA1FFDC4E200D85F52 /* Archive */,
+				0982F0F51FFE080600D85F52 /* Datasaved */,
+				0982F0F11FFDF99A00D85F52 /* plist */,
+			);
+			path = "数据持久化";
+			sourceTree = "<group>";
+		};
+		0982F0EA1FFDC4E200D85F52 /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+				0982F0EE1FFDC54C00D85F52 /* ArchiveModel.h */,
+				0982F0EF1FFDC54C00D85F52 /* ArchiveModel.m */,
+				0982F0EB1FFDC50200D85F52 /* ArchiveViewController.h */,
+				0982F0EC1FFDC50200D85F52 /* ArchiveViewController.m */,
+			);
+			path = Archive;
+			sourceTree = "<group>";
+		};
+		0982F0F11FFDF99A00D85F52 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				0982F0F21FFDF9EA00D85F52 /* PlistViewController.h */,
+				0982F0F31FFDF9EA00D85F52 /* PlistViewController.m */,
+			);
+			path = plist;
+			sourceTree = "<group>";
+		};
+		0982F0F51FFE080600D85F52 /* Datasaved */ = {
+			isa = PBXGroup;
+			children = (
+				0982F0F61FFE08BD00D85F52 /* ShowdataViewController.h */,
+				0982F0F71FFE08BD00D85F52 /* ShowdataViewController.m */,
+				0982F0F91FFE08F200D85F52 /* ShowdataTableViewCell.h */,
+				0982F0FA1FFE08F200D85F52 /* ShowdataTableViewCell.m */,
+				0982F0FC1FFE1D7A00D85F52 /* AddataViewController.h */,
+				0982F0FD1FFE1D7A00D85F52 /* AddataViewController.m */,
+				0982F0FF1FFE256600D85F52 /* AddataTableViewCell.h */,
+				0982F1001FFE256600D85F52 /* AddataTableViewCell.m */,
+			);
+			path = Datasaved;
+			sourceTree = "<group>";
+		};
 		0985EF6A1FD4F93700B26B8A = {
 			isa = PBXGroup;
 			children = (
@@ -141,11 +219,8 @@
 				0985EF771FD4F93700B26B8A /* AppDelegate.m */,
 				0985EF791FD4F93700B26B8A /* ViewController.h */,
 				0985EF7A1FD4F93700B26B8A /* ViewController.m */,
-				0985EFB11FD5228700B26B8A /* Delegate */,
-				0985EFB21FD523AA00B26B8A /* Block */,
-				0985EFB91FD52BAD00B26B8A /* Notification */,
-				09A9C4951FD67A9C00C8DCC5 /* Enumerate */,
-				098A18A31FD7CE7200AF8805 /* Singlecase */,
+				0982F0E51FFDC3B800D85F52 /* 数据传值 */,
+				0982F0E61FFDC41300D85F52 /* 数据持久化 */,
 				0985EF7C1FD4F93700B26B8A /* Main.storyboard */,
 				0985EF7F1FD4F93700B26B8A /* Assets.xcassets */,
 				0985EF811FD4F93700B26B8A /* LaunchScreen.storyboard */,
@@ -367,9 +442,15 @@
 			files = (
 				0985EFAA1FD4F94B00B26B8A /* DateViewController.m in Sources */,
 				0985EFAD1FD5115400B26B8A /* DataView.m in Sources */,
+				0982F1011FFE256600D85F52 /* AddataTableViewCell.m in Sources */,
 				098A18A61FD7CED900AF8805 /* modell.m in Sources */,
+				0982F0ED1FFDC50200D85F52 /* ArchiveViewController.m in Sources */,
 				0985EFBC1FD52C2D00B26B8A /* NotViewController.m in Sources */,
+				0982F0F41FFDF9EA00D85F52 /* PlistViewController.m in Sources */,
+				0982F0F81FFE08BD00D85F52 /* ShowdataViewController.m in Sources */,
 				0985EF7B1FD4F93700B26B8A /* ViewController.m in Sources */,
+				0982F0FB1FFE08F200D85F52 /* ShowdataTableViewCell.m in Sources */,
+				0982F0FE1FFE1D7A00D85F52 /* AddataViewController.m in Sources */,
 				098A18A91FD7CF0000AF8805 /* SingViewController.m in Sources */,
 				0985EF861FD4F93800B26B8A /* main.m in Sources */,
 				09A9C4981FD6862200C8DCC5 /* EnumViewController.m in Sources */,
@@ -378,6 +459,7 @@
 				09A9C49B1FD6864200C8DCC5 /* EnumTowViewController.m in Sources */,
 				0985EFB01FD51A0B00B26B8A /* DeteViewController.m in Sources */,
 				09A9C4941FD6364400C8DCC5 /* SecViewController.m in Sources */,
+				0982F0F01FFDC54C00D85F52 /* ArchiveModel.m in Sources */,
 				0985EF781FD4F93700B26B8A /* AppDelegate.m in Sources */,
 				098A18AC1FD7DBFE00AF8805 /* SecSingViewController.m in Sources */,
 			);

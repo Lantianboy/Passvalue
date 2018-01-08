@@ -12,6 +12,9 @@
 #import "NotViewController.h"
 #import "EnumViewController.h"
 #import "SingViewController.h"
+#import "ArchiveViewController.h"
+#import "PlistViewController.h"
+#import "ShowdataViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * _tab ;
@@ -34,7 +37,7 @@ static NSString * str = @"index" ;
     
     [self.view addSubview:_tab] ;
    
-    _ary = [NSArray arrayWithObjects:@"代理",@"通知",@"block",@"枚举",@"单例", nil] ;
+    _ary = [NSArray arrayWithObjects:@"代理",@"通知",@"block",@"枚举",@"单例",@"归档",@"plist",@"数据持久化", nil] ;
     
 }
 
@@ -98,7 +101,22 @@ static NSString * str = @"index" ;
             SingViewController * vi = [[SingViewController alloc] init] ;
             [self.navigationController pushViewController:vi animated:YES] ;
         }
-            
+            break ;
+        case 5:{
+            ArchiveViewController * vi = [[ArchiveViewController alloc] init] ;
+            [self.navigationController pushViewController:vi animated:YES] ;
+        }
+            break ;
+        case 6:{
+            PlistViewController * plist = [[PlistViewController alloc] init ] ;
+            [self.navigationController pushViewController:plist animated:YES] ;
+        }
+            break ;
+        case 7:{
+            ShowdataViewController * vi = [[ShowdataViewController alloc] init] ;
+            [self.navigationController pushViewController:vi animated:YES] ;
+        }
+            break ;
         default:
             break;
     }
