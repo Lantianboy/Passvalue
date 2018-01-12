@@ -16,7 +16,7 @@
     NSMutableArray * _dataArray ;
 }
 
-
+@property (nonatomic,assign)UITableViewCellEditingStyle style ;
 
 @end
 
@@ -48,6 +48,7 @@
     _tab.tableFooterView = [UIView new] ;
     _tab.delegate = self ;
     _tab.dataSource = self ;
+    _tab.separatorColor = [UIColor orangeColor] ;
     [self.view addSubview:_tab] ;
 }
 
@@ -59,7 +60,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (_dataArray.count < 1) {
-        return 1 ;
+        return  NO ;
     }else{
         return _dataArray.count ;
     }
@@ -73,7 +74,7 @@
     cell = [[ShowdataTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str] ;
     [cell contentCellModel:_dataArray[indexPath.row]] ;
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone] ;
-
+    cell.accessoryView = [[UISwitch alloc] init] ;//cell 添加开关
     return cell ;
 }
 
@@ -88,5 +89,30 @@
     vi.Array = _dataArray ;
     [self.navigationController pushViewController:vi animated:YES] ;
 }
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        //删除数组数据
+        [_dataArray removeObjectAtIndex:indexPath.row] ;
+        
+        //删除列表数据
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight] ;
+    }
+    
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"删除数据" ;
+}
+
+//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return self.style ;
+//}
+
 
 @end

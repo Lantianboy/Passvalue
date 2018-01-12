@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 
 //定义block
-typedef void (^Cblock)(NSString * );
+//typedef void (^Cblock)(NSString * );
 
 @interface SecondViewController : UIViewController
 
 //添加类方法
-+ (void)dastr:(Cblock)str ;
+//+ (void)dastr:(Cblock)str ;
+
+@property (nonatomic, copy) void(^cblock)(NSString * syt) ;
+
 
 @end
