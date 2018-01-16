@@ -49,6 +49,7 @@
     _tab.delegate = self ;
     _tab.dataSource = self ;
     _tab.separatorColor = [UIColor orangeColor] ;
+    //_tab.bounces = NO ;
     [self.view addSubview:_tab] ;
 }
 
@@ -75,6 +76,7 @@
     [cell contentCellModel:_dataArray[indexPath.row]] ;
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone] ;
     cell.accessoryView = [[UISwitch alloc] init] ;//cell 添加开关
+    
     return cell ;
 }
 
@@ -90,24 +92,59 @@
     [self.navigationController pushViewController:vi animated:YES] ;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+    return YES ;
+}
+
+
+//****左滑多个按钮******
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewRowAction * deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         
-        //删除数组数据
+        //先删数据 再删UI
         [_dataArray removeObjectAtIndex:indexPath.row] ;
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade] ;
         
-        //删除列表数据
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight] ;
-    }
+    }] ;
     
+    UITableViewRowAction * topAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"置顶" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        
+        //更新数据
+        [_dataArray exchangeObjectAtIndex:indexPath.row withObjectAtIndex:0] ;
+        
+        //更新UI
+        NSIndexPath * firxtIndexPath = [NSIndexPath indexPathForRow:0 inSection:indexPath.section] ;
+        [tableView moveRowAtIndexPath:indexPath toIndexPath:firxtIndexPath] ;
+        
+    }] ;
+    
+   
+    topAction.backgroundColor = [UIColor blueColor] ;
+    return @[deleteAction, topAction] ;
 }
 
-
-- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return @"删除数据" ;
-}
+//*****一个按钮*****
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//
+//        //删除数组数据
+//        [_dataArray removeObjectAtIndex:indexPath.row] ;
+//
+//        //删除列表数据
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight] ;
+//    }
+//
+//}
+//
+//
+//- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return @"删除数据" ;
+//}
 
 //- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 //{
